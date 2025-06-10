@@ -10,6 +10,10 @@ let data = new Date();
 const express = require('express');
 const server = express();
 
+const cors = require('cors');
+app.use(cors());
+
+
 // Segundo - Criando uma resposta Teste com o .get
 server.get('/',(req, res)=>{
     let ano = req.query.ano;
