@@ -11,7 +11,7 @@ const express = require('express');
 const server = express();
 
 const cors = require('cors');
-app.use(cors());
+server.use(cors());
 
 
 // Segundo - Criando uma resposta Teste com o .get
