@@ -1,5 +1,7 @@
 
-Sim, você consegue trabalhar com Promises ao clicar no botão submit de um formulário! Para isso, você pode interceptar o evento de envio usando JavaScript e trabalhar com fetch() ou async/await.
+Sim, você consegue trabalhar com Promises ao clicar no botão submit de um 
+formulário! Para isso, você pode interceptar o evento de envio usando 
+JavaScript e trabalhar com fetch() ou async/await.
 Aqui está um exemplo básico:
 
 
