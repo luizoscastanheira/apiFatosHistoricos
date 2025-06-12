@@ -4,6 +4,13 @@
 
 const dadosFatos = require('./dadosFatos')
 
+// Função para retornar todos os anos
+function servicoRetornarTudo(dadosFatos){
+    return dadosFatos
+}
+// abaixo é só um teste
+//console.log(servicoRetornarTudo(dadosFatos))
+
 // Função retorna ano
 function servicoBuscarFatoPorAno(ano){
     let fatoSelecionado = dadosFatos.fatosHistoricos.find(fato => {
@@ -30,3 +37,4 @@ function servicoValidaAno(ano){
 
 exports.servicoBuscarFatoPorAno = servicoBuscarFatoPorAno;
 exports.servicoValidaAno = servicoValidaAno;
+exports.servicoRetornarTudo = servicoRetornarTudo;

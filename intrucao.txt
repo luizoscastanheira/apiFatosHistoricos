@@ -1,0 +1,76 @@
+
+Sim, você consegue trabalhar com Promises ao clicar no botão submit de um formulário! Para isso, você pode interceptar o evento de envio usando JavaScript e trabalhar com fetch() ou async/await.
+Aqui está um exemplo básico:
+
+
+
+<form id="meuFormulario">
+    <input type="text" name="ano" placeholder="Digite um ano">
+    <button type="submit">Buscar</button>
+</form>
+
+<script>
+document.getElementById("meuFormulario").addEventListener("submit", async function(event) {
+    event.preventDefault(); // Evita o envio tradicional do formulário
+    
+    const formData = new FormData(event.target);
+    const ano = formData.get("ano");
+
+    try {
+        const response = await fetch(`https://api.exemplo.com/historia?ano=${ano}`);
+        const data = await response.json();
+        console.log("Fatos históricos:", data);
+    } catch (error) {
+        console.error("Erro ao buscar dados:", error);
+    }
+});
+</script>
+
+ O que acontece aqui?
+- O evento submit é capturado e prevenido (event.preventDefault()).
+- Os dados do formulário são extraídos (FormData).
+- Uma requisição assíncrona é feita com fetch(), usando await para aguardar a resposta.
+- Em caso de erro, o catch captura o problema e exibe no console.
+Essa abordagem permite que você trabalhe com respostas assíncronas sem recarregar a página. Precisa de alguma adaptação para seu caso específico? 😊
+
+
+Em vez de apenas exibir os dados no console, você pode atualizar a página dinamicamente. Exemplo:
+
+<div id="resultado"></div>
+
+<script>
+document.getElementById("meuFormulario").addEventListener("submit", async function(event) {
+    event.preventDefault();
+
+    const formData = new FormData(event.target);
+    const ano = formData.get("ano");
+
+    try {
+        const response = await fetch(`https://api.exemplo.com/historia?ano=${ano}`);
+        const data = await response.json();
+        
+        document.getElementById("resultado").innerHTML = `<p>${data.fato}</p>`;
+    } catch (error) {
+        document.getElementById("resultado").innerHTML = `<p style="color: red;">Erro ao buscar dados</p>`;
+    }
+});
+</script>
+
+ Adicionar um indicador de carregamento
+Para melhorar a experiência do usuário, exiba um texto ou animação enquanto os dados são buscados.
+🔹 Validar a entrada do usuário
+Antes de enviar a requisição, verifique se o usuário digitou um número válido e evite consultas desnecessárias.
+🔹 Usar um botão de reset
+Se quiser permitir que o usuário limpe os resultados facilmente, adicione um botão para resetar o formulário.
+
+OBS.:
+
+A palavra response não é um padrão obrigatório, mas é amplamente utilizada por convenção ao lidar com requisições HTTP em JavaScript. Ela representa o objeto retornado pelo fetch() e contém informações sobre a resposta do servidor. Você pode dar outro nome se quiser, como res, dados, ou qualquer variável que faça sentido para o seu código.
+Veja um exemplo alternativo:
+
+fetch("https://api.exemplo.com/historia?ano=1967")
+    .then(dados => dados.json())
+    .then(resultado => console.log(resultado))
+    .catch(erro => console.error("Erro:", erro));
+
+Aqui, eu chamei response de dados, mas continua funcionando do mesmo jeito! O importante é que a variável represente a resposta e seja usada corretamente.
