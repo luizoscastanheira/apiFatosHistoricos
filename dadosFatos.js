@@ -104,7 +104,8 @@ const fatosHistoricos = [
     {"Ano": "2018", "Fato": "Queimadas destroem a Carolina do Norte"},
     {"Ano": "2019", "Fato": "Protestos ocorrem em Hong Kong contra tentativa da China de tirar a autonomia do país."},
     {"Ano": "2020", "Fato": "Tem início a pandemia de COVID-19"},
-    {"Ano": "2021", "Fato": "Brasil começa mostar sinais de que vai virar uma Venezuela"}
+    {"Ano": "2021", "Fato": "Brasil começa mostar sinais de que vai virar uma Venezuela"},
+    {"Ano": "2022", "Fato": "Brasil dá mais um passo em direção ao abismo..."}
 ];
 
 
