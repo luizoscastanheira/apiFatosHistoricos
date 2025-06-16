@@ -27,7 +27,7 @@ function servicoValidaAno(ano){
     if(isNaN(ano)){
         return false;
     }else{
-        if(ano >= 1920 && ano <= 2020){
+        if(ano >= 1920 && ano <= 2022){
             return true;
         }else{
             return false;
