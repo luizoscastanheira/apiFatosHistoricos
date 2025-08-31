@@ -108,5 +108,12 @@ const fatosHistoricos = [
     {"Ano": "2022", "Fato": "Brasil dá mais um passo em direção ao abismo..."}
 ];
 
+// Apenas para teste
+// function buscador(data) {
+//     let resposta = fatosHistoricos.find(fato => fato.Ano == data)
+//     return resposta
+// }
+
+// console.log(buscador(1945))
 
 exports.fatosHistoricos = fatosHistoricos;
