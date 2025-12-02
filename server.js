@@ -1,37 +1,38 @@
 // Esta é Camada API REST
 
 // Importando camada camada de Serviço
-const servico = require('./servico');
+import {listarColecaoCompleta, listarFatoPorAno, validarAno} from "./servico.js";
 
 // Criando um função de Data - Isso é opcional
 let data = new Date();
 
 // Primeiro - Criando o acesso ao Express
-const express = require('express');
+import express from "express";
 const server = express();
 
-const cors = require('cors');
+import cors from "cors";
 server.use(cors());
 
+// Segundo - Criando um EndPoint que retorna toda a coleçao
+server.get("/", (req, res) =>{
+    let resposta = listarColecaoCompleta()
+    res.json(resposta)
+});
 
-// Segundo - Criando uma resposta Teste com o .get
-server.get('/',(req, res)=>{
-    let ano = req.query.ano;
+// Terceiro - Criando um EndPoint que retorna um ano especificado na urel
+server.get("/:ano",(req, res)=>{
+    let ano = req.params.ano;
 
-    if(servico.servicoValidaAno(ano))
-        {
-            var fato = servico.servicoBuscarFatoPorAno(ano);
-            res.json({fato:fato});
-        }
-        else
-        {
-            res.status(400).json({erro:'Parâmetro ano inválido'});
-        }
+     if(validarAno(ano))
+         {
+             var fato = listarFatoPorAno(ano);
+             res.json(fato);
+         }
+         else
+         {
+             res.status(400).json({erro:'Parâmetro ano inválido'});
+         }
 
-
-
-    //let anoFato = servico.servicoBuscarFatoPorAno(ano)
-    //res.json({mensagem:"O Servidor está on-line", ano:anoFato});
 });
 
 // Terceiro - abrindo uma porta de escuta

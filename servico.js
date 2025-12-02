@@ -2,28 +2,36 @@
 
 // Importando a camada de dados
 
-const dadosFatos = require('./dadosFatos')
+import { fatosHistoricos } from './dadosFatos.js';
 
-// Função para retornar todos os anos
-function servicoRetornarTudo(dadosFatos){
-    return dadosFatos
+// Função para retornar todos os anos - OK
+function listarColecaoCompleta(){
+     return fatosHistoricos;
 }
 // abaixo é só um teste
-//console.log(servicoRetornarTudo(dadosFatos))
+//console.log(listarColecaoCompleta())
+
+//let colecao = listarColecaoCompleta(); // atribui à variavel colecao todo o conteudo do array
+//console.log(colecao) // retorna a colecao inteira em um array de objetos
+//console.log(colecao[0]) // retorna o primeiro o objeto/item do array
+//console.log(colecao[0].Ano) // retorna apanas a propriedade Ano do objeto na posição 0 do array.
 
 // Função retorna ano
-function servicoBuscarFatoPorAno(ano){
-    let fatoSelecionado = dadosFatos.fatosHistoricos.find(fato => {
+function listarFatoPorAno(ano){
+    let fatoSelecionado = fatosHistoricos.find(fato => {
         return fato.Ano == ano;
     });
 
-    return fatoSelecionado.Fato;
+    return fatoSelecionado;
 };
 
-// console.log(servicoBuscarFatoPorAno(1987))
+// abaixo é só um teste
+let fato = listarFatoPorAno(1914)
+//console.log(fato.Ano)
+//console.log(fato.Fato)
 
 // Função que valida o ano
-function servicoValidaAno(ano){
+function validarAno(ano){
     if(isNaN(ano)){
         return false;
     }else{
@@ -35,6 +43,5 @@ function servicoValidaAno(ano){
     }
 }
 
-exports.servicoBuscarFatoPorAno = servicoBuscarFatoPorAno;
-exports.servicoValidaAno = servicoValidaAno;
-exports.servicoRetornarTudo = servicoRetornarTudo;
+
+export {listarColecaoCompleta, listarFatoPorAno, validarAno}

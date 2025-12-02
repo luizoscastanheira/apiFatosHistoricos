@@ -4,7 +4,7 @@
 
 const fatosHistoricos = [
     {"Ano": "1914", "Fato": "Inicio da Primeira Guerra Mundial com o assassinato do arquiduque Franscico Ferdinando, da Autria-Hungria e sua esposa Sofia em uma visita à cidade de Saraievo na Bósnia."},
-    {"Ano": "1918", "Fato": "Fim da Primeira Guerra Mundial com a derrota Alemã e final das monarquias alemã, Autro-Húngara e Russa."},
+    {"Ano": "1918", "Fato": "Fim da Primeira Guerra Mundial com a derrota Alemã e queda das monarquias Alemã, Autro-Húngara e Russa."},
     {"Ano": "1920", "Fato": "As mulheres ganham o direito ao voto nos EUA"},
     {"Ano": "1921", "Fato": "O partido comunista chinês é fundado"},
     {"Ano": "1922", "Fato": "O império britânico diminui"},
@@ -118,4 +118,4 @@ const fatosHistoricos = [
 
 // console.log(buscador(1945))
 
-exports.fatosHistoricos = fatosHistoricos;
+export {fatosHistoricos};
