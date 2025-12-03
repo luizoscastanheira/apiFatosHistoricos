@@ -3,7 +3,10 @@
 // Coleção em formato JSON
 
 const fatosHistoricos = [
-    {"Ano": "1914", "Fato": "Inicio da Primeira Guerra Mundial com o assassinato do arquiduque Franscico Ferdinando, da Autria-Hungria e sua esposa Sofia em uma visita à cidade de Saraievo na Bósnia."},
+    {"Ano": "1914", "Fato": "Inicio da Primeira Guerra Mundial com o assassinato do arquiduque Franscico Ferdinando, da Autria-Hungria e sua esposa Sofia em uma visita à cidade de Sarajvo na Bósnia-Herzegovína."},
+    {"Ano": "1915", "Fato": "Em Dardanelos, os britânicos e canadenses são derrotados pelos Turcos."},
+    {"Ano": "1916", "Fato": "Franceses e Alemães sofrem pesadas baixas na batalha de Verdum, em território Francês e em nada o curso da guerra se altera."},
+    {"Ano": "1917", "Fato": "A Itália sofre uma derrota humilhante frente ao avanço austro-alemão na batalha de Caporetto."},    
     {"Ano": "1918", "Fato": "Fim da Primeira Guerra Mundial com a derrota Alemã e queda das monarquias Alemã, Autro-Húngara e Russa."},
     {"Ano": "1920", "Fato": "As mulheres ganham o direito ao voto nos EUA"},
     {"Ano": "1921", "Fato": "O partido comunista chinês é fundado"},
@@ -61,10 +64,10 @@ const fatosHistoricos = [
     {"Ano": "1973", "Fato": "A suprema corte define que os estados podem impedir o aborto a partir do terceiro trimestre de gestação, exceto quando a gestação oferece risco a vida da mulher."},
     {"Ano": "1974", "Fato": "O presidente Richard Nixon Renuncia durante o processo de impeachment causado pelo escandalo de Watergate."},
     {"Ano": "1975", "Fato": "Dois anos depois as últimas tropas americanas deixarem o Vietnã, as tropas comunistas capturam Saigon."},
-    {"Ano": "1976", "Fato": "Dois jatos super-sônicos Concorde levatam voo simultâneamente. Um partindo de Londres para o Barein, e outro de Paris, para o Rio de Janeiro."},
+    {"Ano": "1976", "Fato": "Dois jatos super-sônicos Concorde levatam voo simultâneamente. Um partindo de Londres para o Barein, e outro de Paris, para o Rio de Janeiro. E nasceu o cara que construiu essa API."},
     {"Ano": "1977", "Fato": "Os primeiros computadores pessoais modernos começam a surgir"},
     {"Ano": "1978", "Fato": "Mais de 900 pessoas morrem em um suícidio em massa promovido por um culto em Jonestown, promovido por Jim Jones."},
-    {"Ano": "1979", "Fato": "O Irã se torna uma república islâmica"},
+    {"Ano": "1979", "Fato": "O Irã se torna uma república islâmica. E nasceu a mulher do cara que construiu essa API."},
     {"Ano": "1980", "Fato": "Ronald Reagan é eleito presidente dos Estados Unidos."},
     {"Ano": "1981", "Fato": "Surge a AIDS nos Estados Unidos"},
     {"Ano": "1982", "Fato": "Governo Mexicano diz a reserva federal dos Estados Unidos que o país não consegue pagar o empréstimo de 80 bilhões de dólares."},
@@ -84,12 +87,12 @@ const fatosHistoricos = [
     {"Ano": "1996", "Fato": "A ovelha Dolly é Clonada com sucesso"},
     {"Ano": "1997", "Fato": "A IBM Deep Blue se tornou a primeira máquina a derrotar um campeão do Xadrez, derrotando Garry Kasparov duas vezes e empatando com ele três vezes em 6 partidas."},
     {"Ano": "1998", "Fato": "É lançado o buscador Google"},
-    {"Ano": "1999", "Fato": "A OTAN inicia sua primeira campanha militar"},
-    {"Ano": "2000", "Fato": "A estação espacial internacional é inaugurada."},
-    {"Ano": "2001", "Fato": "As torres gêmeas do World Trade Center são derrubadas em um ataque terrorista"},
+    {"Ano": "1999", "Fato": "A OTAN inicia sua primeira campanha militar. Mas isso é pouco, o cara que construiu essa API casou!"},
+    {"Ano": "2000", "Fato": "A estação espacial internacional é inaugurada. E uma galera achou que o mundo acabaria com o bug do milênio E nasceu o filho do cara que constuiu essa API."},
+    {"Ano": "2001", "Fato": "As torres gêmeas do World Trade Center são derrubadas em um ataque terrorista."},
     {"Ano": "2002", "Fato": "George W. Bush cria o departamento de segurança nacional."},
-    {"Ano": "2003", "Fato": "Os Estados Unidos inciam os ataques ao Iraque"},
-    {"Ano": "2004", "Fato": "O Facebook é fundado"},
+    {"Ano": "2003", "Fato": "Os Estados Unidos inciam os ataques ao Iraque."},
+    {"Ano": "2004", "Fato": "O Facebook é fundado."},
     {"Ano": "2005", "Fato": "o Furacão Katrina destrói New Orleans."},
     {"Ano": "2006", "Fato": "Saddam Hussein é executado"},
     {"Ano": "2007", "Fato": "Apple anuncia seu primeiro smartphone, o iPhone"},
@@ -97,7 +100,7 @@ const fatosHistoricos = [
     {"Ano": "2009", "Fato": "Barack Obama é eleito presidente dos Estados Unidos e se torna o primeiro presidente afro-americano do país."},
     {"Ano": "2010", "Fato": "11 trabalhadores morrem e 17 ficam feridos em uma explosão na costa da Lousiana em uma exploração de óleo."},
     {"Ano": "2011", "Fato": "Bin Laden é assassinado."},
-    {"Ano": "2012", "Fato": "Cientistas do CERN descobrem uma nova partícula através do colisor de hadrons que eles acreditam ser o Bóson de Higgs, a chamada 'Partícula de Deus'."},
+    {"Ano": "2012", "Fato": "Cientistas do CERN descobrem uma nova partícula através do colisor de hadrons que eles acreditam ser o Bóson de Higgs, a chamada 'Partícula de Deus'... E outros acreditaram no fim do mundo - de novo -  por causa de escritos Maias antigos."},
     {"Ano": "2013", "Fato": "Edward Snowden expões segredos de estado dos Estados Unidos e de governos europeus sobre espionagem de outros países."},
     {"Ano": "2014", "Fato": "O Presidente Russo Vladmir Putin orquestra anexar a Crimeia à Rússia, causando sanções dos líderes mundiais ao país."},
     {"Ano": "2015", "Fato": "A nave New Horizon se torna o primeiro objeto criado pela humanidade a passar por Plutão e observar o planeta de perto."},
@@ -107,7 +110,10 @@ const fatosHistoricos = [
     {"Ano": "2019", "Fato": "Protestos ocorrem em Hong Kong contra tentativa da China de tirar a autonomia do país."},
     {"Ano": "2020", "Fato": "Tem início a pandemia de COVID-19"},
     {"Ano": "2021", "Fato": "Brasil começa mostar sinais de que vai virar uma Venezuela"},
-    {"Ano": "2022", "Fato": "Brasil dá mais um passo em direção ao abismo..."}
+    {"Ano": "2022", "Fato": "Brasil dá mais um passo em direção ao abismo..."},
+    {"Ano": "2023", "Fato": "O filho do cara que construiu essa API começou a faculdade de Análise e Desenvolvimento de Sistemas."},
+    {"Ano": "2024", "Fato": "A Mulher do cara que constuiu essa API se formou em Gestao Ambiental."},
+    {"Ano": "2025", "Fato": "O Cara que construiu essa API se formou em Análise e Desenvolvimento de Sistemas."}
 ];
 
 // Apenas para teste

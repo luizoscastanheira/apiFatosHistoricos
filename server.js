@@ -1,7 +1,7 @@
 // Esta é Camada API REST
 
 // Importando camada camada de Serviço
-import {listarColecaoCompleta, listarFatoPorAno, validarAno} from "./servico.js";
+import {listarColecaoCompleta, listarFatoPorAno, validarAno, gerarAnoAleatorio} from "./servico.js";
 
 // Criando um função de Data - Isso é opcional
 let data = new Date();
@@ -13,19 +13,30 @@ const server = express();
 import cors from "cors";
 server.use(cors());
 
-// Segundo - Criando um EndPoint que retorna toda a coleçao
+// Segundo - Criando os endpoints
+
+// 1- EndPoint que retorna toda a coleçao
 server.get("/", (req, res) =>{
     let resposta = listarColecaoCompleta()
     res.json(resposta)
 });
 
-// Terceiro - Criando um EndPoint que retorna um ano especificado na urel
+//  - EndPoint que retorna um fato de forma aleatória
+server.get("/random", (req, res) => {
+    let anoAleatorio = gerarAnoAleatorio();
+    let fatoAleatorio = listarFatoPorAno(anoAleatorio);
+
+    res.json(fatoAleatorio);
+});
+
+
+//  - EndPoint que retorna um ano especificado na url
 server.get("/:ano",(req, res)=>{
     let ano = req.params.ano;
 
      if(validarAno(ano))
          {
-             var fato = listarFatoPorAno(ano);
+             let fato = listarFatoPorAno(ano);
              res.json(fato);
          }
          else
@@ -34,6 +45,9 @@ server.get("/:ano",(req, res)=>{
          }
 
 });
+
+
+
 
 // Terceiro - abrindo uma porta de escuta
 server.listen(8080, ()=>{
